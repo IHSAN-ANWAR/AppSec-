@@ -1,7 +1,5 @@
 # Week 1 — Web Application Reconnaissance Report
 
-**Intern Name:** Ihsan Anwar  
-**Date:** April 2026  
 **Target Application:** OWASP Juice Shop  
 **Target URL:** http://127.0.0.1:3000  
 **Tools Used:** Burp Suite Community Edition, FoxyProxy, Manual Browser Inspection  
@@ -98,21 +96,10 @@ Perform reconnaissance on a sample web application using Burp Suite and manual i
 
 ---
 
-## 7. Potential Vulnerabilities (To Test in Week 2)
-
-| # | Vulnerability | Entry Point | OWASP Category |
-|---|---------------|-------------|----------------|
-| 1 | SQL Injection | Login form | A03: Injection |
-| 2 | Broken Access Control | Admin endpoints | A01: Broken Access Control |
-| 3 | File Upload Bypass | Photo wall upload | A04: Insecure Design |
-| 4 | Open Redirect | /redirect?to= | A10: SSRF |
-| 5 | IDOR | /rest/products/{id}/ | A01: Broken Access Control |
-
----
 
 ## 8. Conclusion
 
-Reconnaissance of OWASP Juice Shop successfully completed. Multiple entry points and API endpoints have been identified and documented. Several potentially vulnerable areas have been noted for further testing in Week 2.
+Reconnaissance of OWASP Juice Shop successfully completed. Multiple entry points and API endpoints have been identified and documented
 
 ---
 
