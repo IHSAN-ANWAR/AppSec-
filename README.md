@@ -162,4 +162,4 @@ All testing documented in these reports was conducted exclusively against OWASP 
 
 ---
 
-*Ihsan Anwar — Cybersecurity Internship 2026*
+*Ihsan Anwar — Cybersecurity  2026*
