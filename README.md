@@ -1,7 +1,5 @@
 # Cybersecurity Internship — Weekly Lab Reports
-
-**Intern:** Ihsan Anwar  
-**Duration:** April 2026  
+  
 **Target Application:** OWASP Juice Shop (http://127.0.0.1:3000)  
 **Focus:** Web Application Penetration Testing, Secure Coding, Threat Intelligence  
 
